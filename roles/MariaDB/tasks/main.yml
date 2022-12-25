@@ -1,0 +1,5 @@
+---
+# tasks file for MariaDB
+- include_tasks: install_MariaDB.yml
+
+- include_tasks: configure_firewall.yml

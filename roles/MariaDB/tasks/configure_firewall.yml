@@ -1,0 +1,10 @@
+- name: Configure firewall for MariaDB
+  ansible.posix.firewalld:
+    port: 3306/tcp
+    permanent: yes
+    state: enabled
+
+- name: reload service firewalld
+  ansible.builtin.systemd:
+    name: firewalld
+    state: reloaded
